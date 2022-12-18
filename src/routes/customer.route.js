@@ -7,8 +7,8 @@ const customerRoutes = express();
 customerRoutes.get('/customer', getCustomers);
 customerRoutes.get('/customer/:id', getCustomer);
 customerRoutes.post('/customer', createCustomer);
-customerRoutes.put('customer/:id', updateCustomer);
-customerRoutes.delete('customer/:id', deleteCustomer);
+customerRoutes.put('/customer/:id', updateCustomer);
+customerRoutes.delete('/customer/:id', deleteCustomer);
 
 async function getCustomers(_, res) {
   const allCustomers = await Customer.findAll();
@@ -27,6 +27,7 @@ async function getCustomer(req, res, next) {
     const rawCustomer = {
       id: customer.id,
       name: customer.name,
+      email: customer.email,
       orders: customer.Orders.map((order) => order.productName),
     };
     res.json(rawCustomer);
@@ -54,7 +55,7 @@ async function deleteCustomer(req, res, next) {
   if (customer === null) {
     next();
   } else {
-    await Customer.destroy();
+    await customer.destroy();
     res.json({});
   }
 }
