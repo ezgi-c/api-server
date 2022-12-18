@@ -1,13 +1,13 @@
-# LAB - Class 03
+# LAB - Class 04
 
-## Project: basic-api-server
+## Project: api-server
 
 ### Author: Ezgi Coban
 
 ### Links and Resources
 
-- [ci/cd](https://github.com/ezgi-c/basic-api-server/actions) (GitHub Actions)
-- [back-end server url](https://basic-api-server-w60b.onrender.com) (when applicable)
+- [ci/cd](https://github.com/ezgi-c/api-server/actions) (GitHub Actions)
+- [back-end server url](https://api-server-diwy.onrender.com) (when applicable)
 [front-end application](http://xyz.com) (when applicable)
 
 ### Setup
@@ -31,9 +31,9 @@ i.e.
 - How do you run tests?
     `npx jest --watch`
 - Any tests of note?
-    404 test for a bad route
+    Tests for REST routes
 - Describe any tests that you did not complete, skipped, etc
-    Tests for bad method and REST routes
+
 
 #### UML
 
